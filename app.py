@@ -113,7 +113,7 @@ def index():
         folium.PolyLine(ruta_coords, color="red", weight=4, opacity=0.8, tooltip="Ruta más corta").add_to(mapa)
 
         # Guardar el mapa
-        mapa_path = "static/mapa_ruta.html"
+        mapa_path = "templates/mapa_ruta.html"
         mapa.save(mapa_path)
 
     return render_template("index.html", aeropuertos=list(aeropuertos.keys()), ruta=ruta_mas_corta, distancia=distancia_total, tiempo_vuelo=round(tiempo_vuelo, 4), mapa_path=mapa_path)
